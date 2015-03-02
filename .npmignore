@@ -6,3 +6,4 @@ Makefile
 logo.png
 .gitignore
 coverage/
+screenshot.png

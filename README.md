@@ -12,10 +12,10 @@ npm install console-wrap
 ## Example
 
 ```
-require('co-aws-sdk')();
-
+require('console-wrap')();
 
 ```
+![screenshot](https://github.com/booxood/node-console-wrap/raw/master/screenshot.png)
 
 ## License
 
