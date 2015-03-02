@@ -1,0 +1,30 @@
+{
+  "name": "console-wrap",
+  "version": "0.0.1",
+  "description": "Wrap node.js console api which add time and color.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/booxood/node-console-wrap.git"
+  },
+  "keywords": [
+    "console",
+    "wrap",
+    "time",
+    "color",
+    "better"
+  ],
+  "author": "Liucw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/booxood/node-console-wrap/issues"
+  },
+  "homepage": "https://github.com/booxood/node-console-wrap",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "moment": "^2.9.0"
+  }
+}
