@@ -28,8 +28,18 @@ module.exports = function consoleWrap (timeFormat) {
     var fn = console[k];
     console[k] = function () {
       var args = slice.call(arguments);
-      args.unshift(chalk[wrapMap[k]]('['+toUpperCase.call(k)+']'));
-      args.unshift(chalk.magenta('['+moment().format(format)+']'));
+      var type = chalk[wrapMap[k]]('['+toUpperCase.call(k)+']');
+      var time = chalk.magenta('['+moment().format(format)+']');
+
+      // refer to https://github.com/joyent/node/blob/master/lib/console.js
+      if (k === 'log' || k === 'info') {
+        process.stdout.write(time);
+        process.stdout.write(type);
+      } else {
+        process.stderr.write(time);
+        process.stderr.write(type);
+      }
+
       fn.apply(this, args);
     };
   });

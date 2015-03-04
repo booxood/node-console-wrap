@@ -14,6 +14,11 @@ npm install console-wrap
 ```
 require('console-wrap')();
 
+console.log('console %s', 'log');
+console.info('console %s', 'info');
+console.warn('console %s', 'warn');
+console.error('console %s', 'error');
+
 ```
 ![screenshot](https://github.com/booxood/node-console-wrap/raw/master/screenshot.png)
 
